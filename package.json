@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/Eduard-R/Passwort-Generator/issues"
   },
-  "homepage": "https://github.com/Eduard-R/Passwort-Generator#readme"
+  "homepage": "https://github.com/Eduard-R/Passwort-Generator#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
 }
