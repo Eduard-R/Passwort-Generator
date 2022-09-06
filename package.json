@@ -1,0 +1,19 @@
+{
+  "name": "passwort-generator",
+  "version": "1.0.0",
+  "description": "A passwort-generator",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Eduard-R/Passwort-Generator.git"
+  },
+  "author": "Eduard Richert",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Eduard-R/Passwort-Generator/issues"
+  },
+  "homepage": "https://github.com/Eduard-R/Passwort-Generator#readme"
+}
