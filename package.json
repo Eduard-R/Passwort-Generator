@@ -2,9 +2,9 @@
   "name": "passwort-generator",
   "version": "1.0.0",
   "description": "A passwort-generator",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "start": "node ./index.js",
+    "start": "node ./server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -18,6 +18,10 @@
   },
   "homepage": "https://github.com/Eduard-R/Passwort-Generator#readme",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.18.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19"
   }
 }
