@@ -1,4 +1,5 @@
-const alpha = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
+const alpha = 'abcdefghijklmnopqrstuvwxyz'
+const capitals = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 const numbers = '0123456789'
 const symbols = '!@#$%^&*_-+='
 
@@ -6,14 +7,16 @@ const symbols = '!@#$%^&*_-+='
  *
  *
  * @param {number} [length=8]
- * @param {boolean} [hasNumbers=true]
- * @param {boolean} [hasSymbols=true]
+ * @param {*} hasNumbers
+ * @param {*} hasSymbols
+ * @param {*} hasCapitals
  * @return {*} 
  */
-const createPassword = (length = 8, hasNumbers = true, hasSymbols = true) => {
+const createPassword = (length = 8, hasNumbers, hasSymbols, hasCapitals) => {
     let chars = alpha
     hasNumbers ? (chars += numbers) : ''
     hasSymbols ? (chars += symbols) : ''
+    hasCapitals ? (chars += capitals) : ''
     return generatePassword(length, chars)
 }
 

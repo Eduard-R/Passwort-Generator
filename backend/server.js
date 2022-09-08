@@ -2,6 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const package = require('./package.json');
 const password = require('./createPassword');
+const url = require('url');
 
 const port = process.env.port || process.env.PORT || 5000;
 const apiRoot = '/api';
@@ -21,7 +22,8 @@ router.get('/', (req, res) => {
 });
 
 router.get('/password', (req, res) => {
-    res.send(password());
+    const queryObject = url.parse(req.url, true).query;
+    res.send(password(queryObject.length, queryObject.hasNumbers, queryObject.hasSymbols, queryObject.hasCapitals));
 });
 
 app.use(apiRoot, router);

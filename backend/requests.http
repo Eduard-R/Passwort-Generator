@@ -1,0 +1,16 @@
+GET http://localhost:5000/api
+
+###
+GET http://localhost:5000/api/password?length=100
+
+###
+GET http://localhost:5000/api/password?length=100&hasNumbers=1
+
+###
+GET http://localhost:5000/api/password?length=100&hasNumbers=1&hasSymbols=1
+
+###
+GET http://localhost:5000/api/password?length=100&hasNumbers=1&hasSymbols=1&hasCapitals=1
+
+###
+GET http://localhost:5000/api/password?length=50&hasNumbers&hasSymbols&hasCapitals=1
