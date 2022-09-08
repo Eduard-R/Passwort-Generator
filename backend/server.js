@@ -11,7 +11,7 @@ const app = express();
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use(cors({ origin: /http:\/\/localhost/ }));
+app.use(cors({ origin: "http://127.0.0.1:5500" })); // Live Server Frontend
 app.options('*', cors());
 
 const router = express.Router();
