@@ -2,7 +2,6 @@ const express = require('express');
 const cors = require('cors');
 const package = require('./package.json');
 const password = require('./createPassword');
-const createPassword = require('./createPassword');
 
 const port = process.env.port || process.env.PORT || 5000;
 const apiRoot = '/api';

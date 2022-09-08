@@ -8,3 +8,12 @@ Folgendes soll eingehalten werden.
 - Das Passwort wird im Backend über eine API (entweder plain nodejs oder nodejs-express) generiert.
 - Backend liefert eine zweite Schnittstelle um ein beliebiges Passwort auf Stärke zu testen. Das Ergebnis soll in einem Popup angezeigt werden welches 5 Sekunden lang zu sehen ist. Design ist egal.
 - Passwortstärke soll nur an der Länge gemessen werden. Werte sind hier auch erstmal egal.
+
+# Server
+
+Der Server startet unter localhost:5000.
+
+# Routes
+
+- http://localhost:5000/api
+- http://localhost:5000/api/password
