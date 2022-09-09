@@ -1,0 +1,65 @@
+body {
+    font-family: "Karantina", sans-serif;
+}
+
+.container {  display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "input output";
+  }
+  
+  .input {  display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    background-color: rgb(160, 218, 186);
+    grid-template-areas:
+      "titleInput"
+      "controls"
+      "buttonGenerate";
+    grid-area: input;
+  }
+  
+  .titleInput { grid-area: titleInput; }
+
+  #titleInput {
+    text-align: center;
+    color: white;
+    font-size: 100px;
+    font-weight: 100;
+  }
+  
+  .controls { grid-area: controls; }
+  
+  .buttonGenerate { grid-area: buttonGenerate; }
+  
+  .output {  display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;;
+    grid-template-areas:
+      "titleOutput"
+      "textOutput"
+      "testPassword";
+    grid-area: output;
+  }
+  
+  .titleOutput { grid-area: titleOutput; }
+
+  #titleOutput {
+    text-align: center;
+    color: rgb(160, 218, 186);
+    font-size: 100px;
+    font-weight: 100;
+  }
+  
+  .textOutput { grid-area: textOutput; }
+  
+  .testPassword { grid-area: testPassword; }
+  
+  
