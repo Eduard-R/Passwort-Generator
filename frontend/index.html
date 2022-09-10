@@ -18,16 +18,33 @@
                 <h1 id="titleInput">EINGABE</h1>
             </div>
             <div class="controls">
-                <input type="number">
+                <label for="length">Anzahl Zeichen</label>
+                <input type="number" name="length" id="length">
+                <label for="symbols">Sonderzeichen</label>
+                <input type="checkbox" name="hasSymbols" id="symbols">
+                <label for="capitals">Grossbuchstaben</label>
+                <input type="checkbox" name="hasCapitals" id="capitals">
+                <label for="numbers">Ziffern</label>
+                <input type="checkbox" name="hasNumbers" id="numbers">
             </div>
-            <div class="buttonGenerate"></div>
+            <div class="buttonGenerate">
+                <button id="generatePasswordButton">Generiere Passwort</button>
+            </div>
         </div>
         <div class="output">
             <div class="titleOutput">
                 <h1 id="titleOutput">AUSGABE</h1>
             </div>
-            <div class="textOutput"></div>
-            <div class="testPassword"></div>
+            <div class="textOutput">
+                <textarea name="outputPassword" id="outputPassword" cols="30" rows="10"></textarea>
+                <button id="clearButton">Löschen</button>
+            </div>
+            <div class="testPassword">
+                <label for="inputTestPassword">Gebe dein Passwort ein und klicke auf "Test Passwort" um sicherzustellen
+                    das dein Passwort ein sicheres ist.</label>
+                <input type="text" name="inputTestPassword" id="inputTestPassword">
+                <button id="testPassordButton">Test Passwort</button>
+            </div>
         </div>
     </div>
 
