@@ -41,11 +41,12 @@ html, body {
     font-weight: 100;
   }
   
-  .controls { 
+  .controls, label, input { 
     grid-area: controls;
     font-size: 3rem;
     text-align: center;
     display: block;
+    margin: 1rem auto;
    }
 
   .buttonGenerate { grid-area: buttonGenerate; }
@@ -58,6 +59,7 @@ html, body {
     font-size: 3rem;
     margin: auto;
     display: block;
+    cursor: pointer;
 
   }
 
@@ -102,6 +104,7 @@ html, body {
     background: rgb(160, 218, 186);
     margin: 3rem auto;
     display: block;
+    cursor: pointer;
   }
 
   #clearButton:hover {
@@ -127,6 +130,7 @@ html, body {
     background: rgb(160, 218, 186);
     margin: 3rem auto;
     display: block;
+    cursor: pointer;
 }
 
 #testPasswordButton:hover {
