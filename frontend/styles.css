@@ -60,6 +60,10 @@ html, body {
     display: block;
 
   }
+
+  #generatePasswordButton:hover {
+    background-color: darkseagreen;
+  }
   
   .output {  display: grid;
     grid-template-columns: 1fr;
@@ -100,6 +104,10 @@ html, body {
     display: block;
   }
 
+  #clearButton:hover {
+    background-color: aquamarine;
+  }
+
   #inputTestPassword {
     width: 100%;
   }
@@ -110,7 +118,7 @@ html, body {
     margin-top: 5rem;
    }
   
-#testPassordButton {
+#testPasswordButton {
     padding: 1.5rem 7rem;
     border: none;
     border-radius: 3rem;
@@ -119,5 +127,9 @@ html, body {
     background: rgb(160, 218, 186);
     margin: 3rem auto;
     display: block;
+}
+
+#testPasswordButton:hover {
+  background-color: aquamarine;
 }
   
