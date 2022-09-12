@@ -18,15 +18,24 @@
                 <h1 id="titleInput">EINGABE</h1>
             </div>
             <div class="controls">
-                <label for="length">Anzahl Zeichen</label>
-                <input type="number" name="length" id="length">
-                <label for="symbols">Sonderzeichen</label>
-                <input type="checkbox" name="hasSymbols" id="symbols">
-                <label for="capitals">Grossbuchstaben</label>
-                <input type="checkbox" name="hasCapitals" id="capitals">
-                <label for="numbers">Ziffern</label>
-                <input type="checkbox" name="hasNumbers" id="numbers">
+                <div class="block">
+                    <label for="length">Anzahl Zeichen</label>
+                    <input type="number" name="length" id="length">
+                </div>
+                <div class="block">
+                    <label for="symbols">Sonderzeichen</label>
+                    <input type="checkbox" name="hasSymbols" id="symbols">
+                </div>
+                <div class="block">
+                    <label for="capitals">Grossbuchstaben</label>
+                    <input type="checkbox" name="hasCapitals" id="capitals">
+                </div>
+                <div class="block">
+                    <label for="numbers">Ziffern</label>
+                    <input type="checkbox" name="hasNumbers" id="numbers">
+                </div>
             </div>
+
             <div class="buttonGenerate">
                 <button id="generatePasswordButton">Generiere Passwort</button>
             </div>
