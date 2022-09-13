@@ -1,7 +1,7 @@
 html, body {
   font-size: 62.5%;
   font-family: "Karantina", sans-serif;
-  height: 100%;
+  height: 100vh;
 }
 
 * {
@@ -30,6 +30,7 @@ html, body {
       "controls"
       "buttonGenerate";
     grid-area: input;
+    height: 100%;
   }
   
   .titleInput { grid-area: titleInput; }
@@ -41,16 +42,6 @@ html, body {
     font-weight: 100;
   }
   
-  .controls { 
-    grid-area: controls;
-    font-size: 3rem;
-    text-align: right;
-    width: 50%;
-
-   }
-
-  .buttonGenerate { grid-area: buttonGenerate; }
-
   #generatePasswordButton {
     padding: 1.5rem 6rem;
     border: none;
@@ -58,14 +49,30 @@ html, body {
     font-family: "Karantina", sans-serif;
     font-size: 3rem;
     margin: auto;
-    display: block;
     cursor: pointer;
-
+    position: relative;
+    left: 25%;
+    top: 15rem;
   }
 
   #generatePasswordButton:hover {
     background-color: darkseagreen;
   }
+
+  .controls { 
+    grid-area: controls;
+    font-size: 3rem;
+    text-align: right;
+    width: 50%;
+   }
+
+  .block {
+    padding-top: 1rem;
+  }
+
+  .buttonGenerate { grid-area: buttonGenerate; }
+
+
   
   .output {  display: grid;
     grid-template-columns: 1fr;

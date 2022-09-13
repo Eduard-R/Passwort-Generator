@@ -1,1 +1,0 @@
-fetch('http://localhost:5000/api/password?length=100&hasNumbers=1&hasSymbols=1&hasCapitals=1');

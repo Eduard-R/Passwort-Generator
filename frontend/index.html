@@ -18,27 +18,31 @@
                 <h1 id="titleInput">EINGABE</h1>
             </div>
             <div class="controls">
-                <div class="block">
-                    <label for="length">Anzahl Zeichen</label>
-                    <input type="number" name="length" id="length">
-                </div>
-                <div class="block">
-                    <label for="symbols">Sonderzeichen</label>
-                    <input type="checkbox" name="hasSymbols" id="symbols">
-                </div>
-                <div class="block">
-                    <label for="capitals">Grossbuchstaben</label>
-                    <input type="checkbox" name="hasCapitals" id="capitals">
-                </div>
-                <div class="block">
-                    <label for="numbers">Ziffern</label>
-                    <input type="checkbox" name="hasNumbers" id="numbers">
-                </div>
+                <form action="http://localhost:5000/api/password?">
+                    <div class="block">
+                        <label for="length">Anzahl Zeichen:</label>
+                        <input type="number" name="length" id="length">
+                    </div>
+                    <div class="block">
+                        <label for="symbols">Sonderzeichen:</label>
+                        <input type="checkbox" name="hasSymbols" id="symbols">
+                    </div>
+                    <div class="block">
+                        <label for="capitals">Grossbuchstaben:</label>
+                        <input type="checkbox" name="hasCapitals" id="capitals">
+                    </div>
+                    <div class="block">
+                        <label for="numbers">Ziffern:</label>
+                        <input type="checkbox" name="hasNumbers" id="numbers">
+                    </div>
+                    <button id="generatePasswordButton" type="submit">Generiere
+                        Passwort</button>
+                </form>
             </div>
 
-            <div class="buttonGenerate">
+            <!-- <div class="buttonGenerate">
                 <button id="generatePasswordButton">Generiere Passwort</button>
-            </div>
+            </div> -->
         </div>
         <div class="output">
             <div class="titleOutput">
