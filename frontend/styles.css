@@ -42,6 +42,62 @@ html, body {
     font-weight: 100;
   }
   
+  .controls { 
+    grid-area: controls;
+    font-size: 3rem;
+    text-align: right;
+    width: 50%;
+   }
+
+  .block {
+    padding-top: 2rem;
+  }
+
+  label {
+    cursor: pointer;
+  }
+
+  input[type="number"] {
+    appearance: none;
+    border: none;
+    padding: 0rem 0.5rem;
+    border-radius: 5rem;
+    font-size: 3.5rem;
+    font-family: "Karantina", sans-serif;
+    text-align: center;
+  }
+
+  input[type="checkbox"] {
+    appearance: none;
+    height: 2.5rem;
+    width: 2.5rem;
+    background-color: white;
+    border-radius: 0.3rem;
+    cursor: pointer;
+  }
+
+  input[type="checkbox"]:after {
+    font-family: "Font Awesome 5 free";
+    content: "\f00c";
+    font-weight: 900;
+    font-size: 3rem;
+    display: none;
+  }
+
+  input[type="checkbox"]:hover {
+    background-color: aquamarine;
+  }
+
+  input[type="checkbox"]:checked {
+    background-color: aquamarine;
+  }
+
+  input[type="checkbox"]:checked:after {
+    display: block;
+  }
+
+  .buttonGenerate { grid-area: buttonGenerate; }
+
   #generatePasswordButton {
     padding: 1.5rem 6rem;
     border: none;
@@ -56,23 +112,8 @@ html, body {
   }
 
   #generatePasswordButton:hover {
-    background-color: darkseagreen;
+    background-color: aquamarine;
   }
-
-  .controls { 
-    grid-area: controls;
-    font-size: 3rem;
-    text-align: right;
-    width: 50%;
-   }
-
-  .block {
-    padding-top: 1rem;
-  }
-
-  .buttonGenerate { grid-area: buttonGenerate; }
-
-
   
   .output {  display: grid;
     grid-template-columns: 1fr;
@@ -99,7 +140,7 @@ html, body {
 
   #outputPassword {
     width: 100%;
-    border-radius: 3rem;
+    border-radius: 0.5rem;
   }
 
   #clearButton {
