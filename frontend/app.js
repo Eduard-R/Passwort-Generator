@@ -1,30 +1,35 @@
 const controlsForm = document.getElementById('controlsForm');
-
-
+let outputPassword = document.getElementById('outputPassword');
 
 controlsForm.addEventListener('submit', (e) => {
     e.preventDefault();
 
-    // let length = controlsForm.length.value;
-    // let hasSymbols = controlsForm.hasSymbols.value;
-    // let hasCapitals = controlsForm.hasCapitals.value;
-    // let hasNumbers = controlsForm.hasNumbers.value;
+    const length = controlsForm.length.value;
+    const hasSymbols = controlsForm.hasSymbols.checked;
+    const hasCapitals = controlsForm.hasCapitals.checked;
+    const hasNumbers = controlsForm.hasNumbers.checked;
 
-    // console.log(length, hasSymbols, hasCapitals, hasNumbers);
+    let uri = `http://localhost:5000/api/password?length=${length}`;
 
-    // new FormData(controlsForm);
+    if (hasSymbols === true) {
+        uri = `${uri}&hasSymbols=${hasSymbols}`;
+    }
 
-    // console.log(FormData);
+    if (hasCapitals === true) {
+        uri = `${uri}&hasCapitals=${hasCapitals}`;
+    }
 
-    const length = document.getElementById('length').value;
-    const symbols = document.getElementById('symbols').value;
-    const capitals = document.getElementById('capitals').value;
-    const numbers = document.getElementById('numbers').value;
+    if (hasNumbers === true) {
+        uri = `${uri}&hasNumbers=${hasNumbers}`;
+    }
 
-    console.log(length, symbols, capitals, numbers);
-
+    fetch(uri)
+        .then((response) => response.text())
+        .then((text) => {
+            outputPassword.value = text;
+        })
 });
 
+// ToDo: Löschen Button
 
-//"http://localhost:5000/api/password?"
-
+// ToDo: Test Passwort
