@@ -141,6 +141,7 @@ html, body {
   #outputPassword {
     width: 100%;
     border-radius: 0.5rem;
+    font-size: 2rem;
   }
 
   #clearButton {
@@ -161,6 +162,8 @@ html, body {
 
   #inputTestPassword {
     width: 100%;
+    border-radius: 0.5rem;
+    font-size: 2rem;
   }
   
   .testPassword { 
@@ -184,4 +187,5 @@ html, body {
 #testPasswordButton:hover {
   background-color: aquamarine;
 }
+
   

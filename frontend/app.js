@@ -35,17 +35,13 @@ function clearOutput() {
     document.getElementById('outputPassword').value = '';
 }
 
-// ToDo: Test Passwort
 function testPassword() {
-    inputTestPassword = inputTestPassword.value;
 
-    console.log(inputTestPassword.length);
-
-    if (inputTestPassword == '') {
+    if (inputTestPassword.value == '') {
         alert('Kein Passwort zum Testen vorhanden');
     } else {
 
-        if (inputTestPassword.length < 8) {
+        if (inputTestPassword.value.length < 8) {
             alert('Passwort ist unsicher');
         } else {
             alert('Passwort ist sicher');
