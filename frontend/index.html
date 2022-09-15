@@ -24,7 +24,7 @@
                 <form id="controlsForm">
                     <div class="block">
                         <label for="length">Anzahl Zeichen:</label>
-                        <input type="number" min="1" name="length" id="length">
+                        <input required type="number" min="1" name="length" id="length">
                     </div>
                     <div class="block">
                         <label for="symbols">Sonderzeichen:</label>
@@ -53,13 +53,13 @@
             </div>
             <div class="textOutput">
                 <textarea readonly name="outputPassword" id="outputPassword" cols="30" rows="10"></textarea>
-                <button id="clearButton">Löschen</button>
+                <button id="clearButton" onclick="clearOutput()">Löschen</button>
             </div>
             <div class="testPassword">
                 <label for="inputTestPassword">Gebe dein Passwort ein und klicke auf "Test Passwort" um sicherzustellen
                     das dein Passwort ein sicheres ist.</label>
                 <input type="text" name="inputTestPassword" id="inputTestPassword">
-                <button id="testPasswordButton">Test Passwort</button>
+                <button id="testPasswordButton" onclick="testPassword()">Test Passwort</button>
             </div>
         </div>
     </div>

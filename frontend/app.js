@@ -1,5 +1,6 @@
 const controlsForm = document.getElementById('controlsForm');
 let outputPassword = document.getElementById('outputPassword');
+let inputTestPassword = document.getElementById('inputTestPassword');
 
 controlsForm.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -9,27 +10,45 @@ controlsForm.addEventListener('submit', (e) => {
     const hasCapitals = controlsForm.hasCapitals.checked;
     const hasNumbers = controlsForm.hasNumbers.checked;
 
-    let uri = `http://localhost:5000/api/password?length=${length}`;
+    let url = `http://localhost:5000/api/password?length=${length}`;
 
     if (hasSymbols === true) {
-        uri = `${uri}&hasSymbols=${hasSymbols}`;
+        url = `${url}&hasSymbols=${hasSymbols}`;
     }
 
     if (hasCapitals === true) {
-        uri = `${uri}&hasCapitals=${hasCapitals}`;
+        url = `${url}&hasCapitals=${hasCapitals}`;
     }
 
     if (hasNumbers === true) {
-        uri = `${uri}&hasNumbers=${hasNumbers}`;
+        url = `${url}&hasNumbers=${hasNumbers}`;
     }
 
-    fetch(uri)
+    fetch(url)
         .then((response) => response.text())
         .then((text) => {
             outputPassword.value = text;
         })
 });
 
-// ToDo: Löschen Button
+function clearOutput() {
+    document.getElementById('outputPassword').value = '';
+}
 
 // ToDo: Test Passwort
+function testPassword() {
+    inputTestPassword = inputTestPassword.value;
+
+    console.log(inputTestPassword.length);
+
+    if (inputTestPassword == '') {
+        alert('Kein Passwort zum Testen vorhanden');
+    } else {
+
+        if (inputTestPassword.length < 8) {
+            alert('Passwort ist unsicher');
+        } else {
+            alert('Passwort ist sicher');
+        }
+    }
+}
