@@ -1,6 +1,6 @@
 const controlsForm = document.getElementById('controlsForm');
-let outputPassword = document.getElementById('outputPassword');
-let inputTestPassword = document.getElementById('inputTestPassword');
+const outputPassword = document.getElementById('outputPassword');
+const inputTestPassword = document.getElementById('inputTestPassword');
 
 controlsForm.addEventListener('submit', (e) => {
     e.preventDefault();
